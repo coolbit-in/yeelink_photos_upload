@@ -7,7 +7,7 @@ def upload_yeelink(image_name, log_file):
     length = os.path.getsize(image_name)
     image_data = open(image_name, 'rb')
     request = urllib2.Request(url, data=image_data)
-    request.add_header('U-ApiKey', '14765d9cc6aec5057880398486d08f9c')
+    request.add_header('U-ApiKey', '14765d9cc6axxx057880398486d08f9c')
     request.add_header('Content-Length', '%d' % length)
     res = urllib2.urlopen(request).read().strip()
     log_file.write(res + '\n')
